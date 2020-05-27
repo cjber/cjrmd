@@ -11,8 +11,10 @@ make_latex_table <- function(df, cap = "", dig = 2, col_names = NA,
                              table_env = "table", ...) {
     options(knitr.kable.NA = "")
     knitr::kable(df,
-        digits = dig, caption = cap,
+        digits = dig,
+        caption = cap,
         linesep = "", # remove 5 row spacing
+        align = rep("c", length(df[, 1])),
         longtable = FALSE, booktabs = TRUE, # latex opts
         format = "latex",
         escape = F, # allow maths chars
