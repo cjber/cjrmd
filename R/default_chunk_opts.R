@@ -10,7 +10,7 @@
 default_chunk_opts <- function(cache = FALSE) {
     knitr::opts_knit$set(self.contained = TRUE)
     knitr::opts_chunk$set(
-        fig.align = "center", fig.pos = "htbp",
+        fig.align = "center", fig.pos = "tb", # only top or bottom
         fig.showtext = TRUE,
         cache = cache, autodep = FALSE, echo = FALSE,
         cache.path = "data/cache/",
