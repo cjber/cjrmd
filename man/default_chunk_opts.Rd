@@ -4,7 +4,7 @@
 \alias{default_chunk_opts}
 \title{Set default knitr chunk options}
 \usage{
-default_chunk_opts(cache = FALSE)
+default_chunk_opts(cache = FALSE, ...)
 }
 \arguments{
 \item{cache}{option}
@@ -13,7 +13,13 @@ default_chunk_opts(cache = FALSE)
 nothing
 }
 \description{
-Center figures with default latex positioning, allow custom text
-Allow choosing whether to use cache, set custom code block size
-and colour. Dont show warnings, code chunk size width set.
+Set more sensible chunk options for LaTex:
+fig.align = "center", fig.pos = "tb",
+fig.showtext = TRUE,
+cache = cache, autodep = FALSE, echo = FALSE,
+cache.path = "data/cache/",
+message = FALSE, size = "footnotesize",
+background = rgb(0.97, 0.97, 0.97),
+warning = FALSE,
+comment = NA, out.width = ".75\\linewidth"
 }

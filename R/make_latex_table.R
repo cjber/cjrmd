@@ -24,3 +24,19 @@ make_latex_table <- function(df, cap = "", dig = 2, col_names = NA,
         kableExtra::kable_styling(font_size = 9, position = "center") %>%
         kableExtra::row_spec(0, bold = TRUE)
 }
+
+make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
+                             table_env = "table", ...) {
+    options(knitr.kable.NA = "")
+    knitr::kable(df,
+        digits = dig,
+        caption = cap,
+        linesep = "", # remove 5 row spacing
+        align = rep("c", length(df[, 1])),
+        longtable = FALSE,
+        escape = F, # allow maths chars
+        col.names = col_names
+    ) %>%
+        kableExtra::kable_styling(font_size = 9, position = "center") %>%
+        kableExtra::row_spec(0, bold = TRUE)
+}

@@ -1,13 +1,19 @@
 #' Set default knitr chunk options
 #'
-#' Center figures with default latex positioning, allow custom text
-#' Allow choosing whether to use cache, set custom code block size
-#' and colour. Dont show warnings, code chunk size width set.
+#' Set more sensible chunk options for LaTex:
+#'    fig.align = "center", fig.pos = "tb",
+#'    fig.showtext = TRUE,
+#'    cache = cache, autodep = FALSE, echo = FALSE,
+#'    cache.path = "data/cache/",
+#'    message = FALSE, size = "footnotesize",
+#'    background = rgb(0.97, 0.97, 0.97),
+#'    warning = FALSE,
+#'    comment = NA, out.width = ".75\\linewidth"
 #'
 #' @param cache option
 #' @return nothing
 #' @export
-default_chunk_opts <- function(cache = FALSE) {
+default_chunk_opts <- function(cache = FALSE, ...) {
     knitr::opts_knit$set(self.contained = TRUE)
     knitr::opts_chunk$set(
         fig.align = "center", fig.pos = "tb", # only top or bottom
@@ -17,6 +23,22 @@ default_chunk_opts <- function(cache = FALSE) {
         message = FALSE, size = "footnotesize",
         background = rgb(0.97, 0.97, 0.97),
         warning = FALSE,
-        comment = NA, out.width = ".75\\linewidth"
+        comment = NA, out.width = ".75\\linewidth",
+        ...
+    )
+}
+
+default_html_chunk_opts <- function(cache = FALSE, ...) {
+    knitr::opts_knit$set(self.contained = TRUE)
+    knitr::opts_chunk$set(
+        fig.align = "center", fig.pos = "tb", # only top or bottom
+        fig.showtext = TRUE,
+        cache = cache, autodep = FALSE, echo = FALSE,
+        cache.path = "data/cache/",
+        message = FALSE, size = "footnotesize",
+        background = rgb(0.97, 0.97, 0.97),
+        warning = FALSE,
+        comment = NA,
+        ...
     )
 }
