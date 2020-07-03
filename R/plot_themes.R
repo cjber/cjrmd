@@ -1,12 +1,10 @@
-#' Default ggplot themes
+#' Default ggplot map theme
 #'
-#' Clean map theme and plot theme using serif font.
+#' Clean plot theme using serif font.
 #'
 #' @param No params
-#' @return ggplot2 themes
+#' @return ggplot2 theme
 #' @export
-
-# map (blank with border)
 cj_map_theme <- ggthemes::theme_map() +
     ggplot2::theme(panel.border = ggplot2::element_rect(
         colour = "white",
@@ -17,6 +15,14 @@ cj_map_theme <- ggthemes::theme_map() +
 showtext::showtext_auto()
 sysfonts::font_add_google("Roboto", "Roboto")
 sysfonts::font_add_google("Roboto Slab", "Roboto Slab")
+
+#' Default ggplot plot theme
+#'
+#' Clean map theme.
+#'
+#' @param No params
+#' @return ggplot2 theme
+#' @export
 cj_plot_theme <- ggplot2::theme_classic() +
     ggplot2::theme(
         axis.ticks.y = ggplot2::element_blank(),

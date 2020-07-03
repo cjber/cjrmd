@@ -2,6 +2,8 @@
 
 export("%>%")
 export(cj_map_theme)
+export(cj_plot_theme)
 export(default_chunk_opts)
+export(make_html_table)
 export(make_latex_table)
 importFrom(magrittr,"%>%")

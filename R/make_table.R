@@ -29,6 +29,13 @@ make_latex_table <- function(df, cap = "", dig = 2, col_names = NA,
         kableExtra::row_spec(0, bold = TRUE)
 }
 
+#' Default html table options
+#'
+#' HTML version of latex table
+#'
+#' @param data.frame and various kable options
+#' @return kable table
+#' @export
 make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
                             table_env = "table", ...) {
     options(knitr.kable.NA = "")
