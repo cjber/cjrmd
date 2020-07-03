@@ -21,12 +21,16 @@ make_latex_table <- function(df, cap = "", dig = 2, col_names = NA,
         col.names = col_names,
         table.env = table_env # change to figure* if over two cols
     ) %>%
-        kableExtra::kable_styling(font_size = 9, position = "center") %>%
+        kableExtra::kable_styling(
+            font_size = 9,
+            position = "center",
+            full_width = F
+        ) %>%
         kableExtra::row_spec(0, bold = TRUE)
 }
 
 make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
-                             table_env = "table", ...) {
+                            table_env = "table", ...) {
     options(knitr.kable.NA = "")
     knitr::kable(df,
         digits = dig,
