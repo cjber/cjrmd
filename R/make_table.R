@@ -42,13 +42,10 @@ make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
     knitr::kable(df,
         digits = dig,
         caption = cap,
-        linesep = "", # remove 5 row spacing
         format = "html",
         align = rep("c", length(df[, 1])),
-        longtable = FALSE,
-        escape = F, # allow maths chars
         col.names = col_names
     ) %>%
-        kableExtra::kable_styling(font_size = 9, position = "center") %>%
+        kableExtra::kable_styling(font_size = 10, position = "center") %>%
         kableExtra::row_spec(0, bold = TRUE)
 }
