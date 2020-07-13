@@ -36,8 +36,7 @@ make_latex_table <- function(df, cap = "", dig = 2, col_names = NA,
 #' @param data.frame and various kable options
 #' @return kable table
 #' @export
-make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
-                            table_env = "table", ...) {
+make_html_table <- function(df, cap = "", dig = 2, col_names = NA, ...) {
     options(knitr.kable.NA = "")
     knitr::kable(df,
         digits = dig,
