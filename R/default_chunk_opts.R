@@ -28,6 +28,13 @@ default_chunk_opts <- function(cache = FALSE, ...) {
     )
 }
 
+#' Set default knitr chunk options for html
+#'
+#' Set more sensible chunk options for HTML
+#'
+#' @param cache option
+#' @return nothing
+#' @export
 default_html_chunk_opts <- function(cache = FALSE, ...) {
     knitr::opts_knit$set(self.contained = TRUE)
     knitr::opts_chunk$set(
