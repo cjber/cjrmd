@@ -43,6 +43,7 @@ make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
         digits = dig,
         caption = cap,
         linesep = "", # remove 5 row spacing
+        format = "html",
         align = rep("c", length(df[, 1])),
         longtable = FALSE,
         escape = F, # allow maths chars

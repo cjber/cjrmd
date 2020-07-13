@@ -42,7 +42,7 @@ default_html_chunk_opts <- function(cache = FALSE, ...) {
         fig.showtext = TRUE,
         cache = cache, autodep = FALSE, echo = FALSE,
         cache.path = "data/cache/",
-        message = FALSE, size = "footnotesize",
+        message = FALSE,
         background = rgb(0.97, 0.97, 0.97),
         warning = FALSE,
         comment = NA,
