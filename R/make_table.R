@@ -14,7 +14,7 @@ make_latex_table <- function(df, cap = "", dig = 2, col_names = NA,
         digits = dig,
         caption = cap,
         linesep = "", # remove 5 row spacing
-        align = rep("c", length(df[, 1])),
+        align = c("l", rep("c", ncol(df) - 1)),
         longtable = FALSE, booktabs = TRUE, # latex opts
         format = "latex",
         escape = F, # allow maths chars
@@ -43,7 +43,7 @@ make_html_table <- function(df, cap = "", dig = 2, col_names = NA,
         digits = dig,
         caption = cap,
         format = "html",
-        align = rep("c", length(df[, 1])),
+        align = c("l", rep("c", ncol(df) - 1)),
         col.names = col_names
     ) %>%
         kableExtra::kable_styling(font_size = 10, position = "center") %>%
