@@ -4,14 +4,7 @@
 \alias{make_html_table}
 \title{Default html table options}
 \usage{
-make_html_table(
-  df,
-  cap = "",
-  dig = 2,
-  col_names = NA,
-  table_env = "table",
-  ...
-)
+make_html_table(df, cap = "", dig = 2, col_names = NA, ...)
 }
 \arguments{
 \item{data.frame}{and various kable options}

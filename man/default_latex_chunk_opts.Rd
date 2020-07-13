@@ -2,7 +2,7 @@
 % Please edit documentation in R/chunk_opts.R
 \name{default_latex_chunk_opts}
 \alias{default_latex_chunk_opts}
-\title{Set default knitr chunk options}
+\title{Set default knitr chunk options for latex}
 \usage{
 default_latex_chunk_opts(cache = FALSE, ...)
 }
@@ -13,13 +13,5 @@ default_latex_chunk_opts(cache = FALSE, ...)
 nothing
 }
 \description{
-Set more sensible chunk options for LaTex:
-fig.align = "center", fig.pos = "tb",
-fig.showtext = TRUE,
-cache = cache, autodep = FALSE, echo = FALSE,
-cache.path = "data/cache/",
-message = FALSE, size = "footnotesize",
-background = rgb(0.97, 0.97, 0.97),
-warning = FALSE,
-comment = NA, out.width = ".75\\linewidth"
+Set more sensible chunk options for LaTex.
 }

@@ -45,6 +45,6 @@ make_html_table <- function(df, cap = "", dig = 2, col_names = NA, ...) {
         align = c("l", rep("c", ncol(df) - 1)),
         col.names = col_names
     ) %>%
-        kableExtra::kable_styling(font_size = 10, position = "center") %>%
+        kableExtra::kable_styling(position = "center") %>%
         kableExtra::row_spec(0, bold = TRUE)
 }
