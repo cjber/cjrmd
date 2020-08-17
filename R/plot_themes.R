@@ -1,3 +1,7 @@
+showtext::showtext_auto()
+sysfonts::font_add_google("Roboto", "Roboto")
+sysfonts::font_add_google("Roboto Slab", "Roboto Slab")
+
 #' Default ggplot map theme
 #'
 #' Clean plot theme using serif font.
@@ -13,14 +17,11 @@ cj_map_theme <- ggthemes::theme_map() +
 
 #' Default ggplot plot theme
 #'
-#' Clean map theme.
+#' Clean theme.
 #'
 #' @param No params
 #' @return ggplot2 theme
 #' @export
-showtext::showtext_auto()
-sysfonts::font_add_google("Roboto", "Roboto")
-sysfonts::font_add_google("Roboto Slab", "Roboto Slab")
 cj_plot_theme <- ggplot2::theme_classic() +
     ggplot2::theme(
         axis.ticks.y = ggplot2::element_blank(),

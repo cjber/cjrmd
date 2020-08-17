@@ -28,6 +28,7 @@ default_latex_chunk_opts <- function(cache = FALSE, ...) {
 #' @return nothing
 #' @export
 default_html_chunk_opts <- function(cache = FALSE, ...) {
+    # ensure sharable
     knitr::opts_knit$set(self.contained = TRUE)
     knitr::opts_chunk$set(
         fig.align = "center",
