@@ -7,14 +7,14 @@
 #' @param data.frame and various kable options
 #' @return kable table
 #' @export
-make_latex_table <- function(df, cap = "", dig = 2,
+make_latex_table <- function(df, caption = "", dig = 2,
                              col_names = NA, row_names = NA,
                              align = c("l", rep("c", ncol(df) - 1)),
                              table_env = "table", ...) {
     options(knitr.kable.NA = "")
     knitr::kable(df,
         digits = dig,
-        caption = cap,
+        caption = caption,
         linesep = "", # remove 5 row spacing
         align = align,
         longtable = FALSE, booktabs = TRUE, # latex opts
