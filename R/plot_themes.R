@@ -1,7 +1,3 @@
-showtext::showtext_auto()
-sysfonts::font_add_google("Roboto", "Roboto")
-sysfonts::font_add_google("Roboto Slab", "Roboto Slab")
-
 #' Default ggplot map theme
 #'
 #' Clean plot theme using serif font.
@@ -26,8 +22,8 @@ cj_plot_theme <- ggplot2::theme_classic() +
     ggplot2::theme(
         axis.ticks.y = ggplot2::element_blank(),
         axis.line = ggplot2::element_blank(),
-        axis.text = ggplot2::element_text(size = 9, family = "Roboto"),
-        axis.title = ggplot2::element_text(size = 10, family = "Roboto Slab"),
+        axis.text = ggplot2::element_text(size = 9, family = "serif"),
+        axis.title = ggplot2::element_text(size = 10, family = "serif"),
         axis.text.y = ggplot2::element_blank(),
         legend.title = ggplot2::element_blank(),
         legend.position = "bottom",
