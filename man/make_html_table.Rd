@@ -4,7 +4,15 @@
 \alias{make_html_table}
 \title{Default html table options}
 \usage{
-make_html_table(df, cap = "", dig = 2, col_names = NA, ...)
+make_html_table(
+  df,
+  caption = "",
+  digits = 2,
+  col_names = NA,
+  row_names = NA,
+  align = c("l", rep("c", ncol(df) - 1)),
+  ...
+)
 }
 \arguments{
 \item{data.frame}{and various kable options}

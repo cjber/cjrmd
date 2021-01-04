@@ -6,9 +6,11 @@
 \usage{
 make_latex_table(
   df,
-  cap = "",
+  caption = "",
   dig = 2,
   col_names = NA,
+  row_names = NA,
+  align = c("l", rep("c", ncol(df) - 1)),
   table_env = "table",
   ...
 )
