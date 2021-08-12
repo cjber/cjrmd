@@ -32,5 +32,5 @@ cj_plot_theme <- ggplot2::theme_classic() +
             colour = "black",
             fill = NA,
             size = 1
-        ), ...
+        )
     )
