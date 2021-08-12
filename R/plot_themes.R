@@ -9,7 +9,7 @@ cj_map_theme <- ggthemes::theme_map() +
     ggplot2::theme(panel.border = ggplot2::element_rect(
         colour = "white",
         fill = NA, size = 2
-    ), legend.position = "none")
+    ), legend.position = "none", ...)
 
 #' Default ggplot plot theme
 #'
@@ -32,5 +32,5 @@ cj_plot_theme <- ggplot2::theme_classic() +
             colour = "black",
             fill = NA,
             size = 1
-        )
+        ), ...
     )
